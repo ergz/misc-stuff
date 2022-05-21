@@ -1,0 +1,6 @@
+[
+	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["ctrl+."], "command": "focus_neighboring_group" },	
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+]
