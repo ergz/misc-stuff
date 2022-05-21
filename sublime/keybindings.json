@@ -1,6 +1,60 @@
 [
-	{ "keys": ["ctrl+,"], "command": "focus_neighboring_group", "args": {"forward": false} },
-	{ "keys": ["ctrl+."], "command": "focus_neighboring_group" },	
-	{ "keys": ["alt+up"], "command": "swap_line_up" },
-	{ "keys": ["alt+down"], "command": "swap_line_down" },
+    { "keys": ["alt+up"], "command": "swap_line_up" },
+    { "keys": ["alt+down"], "command": "swap_line_down" },
+
+    // move by empty lines
+    {"keys": ["ctrl+up"], 
+        "command": "move", 
+        "args": {
+            "by": "stops", 
+            "empty_line": true, 
+            "forward": false
+        }
+    },
+    {"keys": ["ctrl+down"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true}},
+    // With selecting
+    {"keys": ["ctrl+shift+up"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": false, "extend": true}},
+    {"keys": ["ctrl+shift+down"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true, "extend": true}},
+
+
+    { "keys": ["ctrl+shift+'"], "command": "show_at_center" }, 
+
+    { "keys": ["ctrl+shift+i"], "command": "reindent"},
+
+    { "keys": ["ctrl+shift+v"], "command": "paste" },
+    { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+
+    { "keys": ["ctrl+shift+c"], "command": "annotated_comments"},
+    // {"keys": ["ctrl+shift+p"], "command": "<preview_command_here>"}
+    { "keys": ["ctrl+,"], "command": "focus_neighboring_group", "args": {"forward": false} },
+    { "keys": ["ctrl+."], "command": "focus_neighboring_group" },
+    { "keys": ["ctrl+shift+,"], "command": "move_to_neighboring_group", "args": {"forward": false} },
+    // { "keys": ["ctrl+2"], "command": "move_to_neighboring_group" },
+
+    {
+        "keys": ["alt+\\"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+        }
+    }, 
+    {
+        "keys": ["alt+shift+\\"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1]]
+        }
+    },
+
+    { "keys": ["alt+m"], "command": "build" },
+    { "keys": ["alt+left"], "command": "jump_back" },
+
+   // { "keys": ["alt+y"], "command": "insert_snippet", "args": {"name": "Packages/User/myFunction.sublime-snippet"} }
 ]
+
